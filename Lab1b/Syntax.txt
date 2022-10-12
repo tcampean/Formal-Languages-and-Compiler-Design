@@ -1,0 +1,22 @@
+Syntax:
+
+program ::= "prog" decllist ";" cmpdstmt "exit"
+decllist ::= declaration | declaration "," decllist
+declaration ::= type " " IDENTIFIER
+type ::= "Number"  | "String" | "Char"
+arraydecl ::= ["Numbers"  | "Strings"] IDENTIFIER
+cmpdstmt ::= "start" stmtlist "stop"
+stmtlist ::= stmt | stmt ";" stmtlist
+stmt ::= simplstmt | structstmt
+simplstmt ::= assignstmt | iostmt
+assignstmt ::= IDENTIFIER "eq" expression
+operation ::=  |"+"| "-" | "eq"| "mul"| "mod"| "div"|
+expression ::= expression operation term | term
+term ::= "(" expression ")" | IDENTIFIER
+iostmt ::= "read" | "write" "(" IDENTIFIER ")"
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+ifstmt ::= "when" "(" condition ")" stmt ["otherwise" stmt]
+whilestmt ::= "while" "(" condition ")"  stmt
+forstmt ::= "do" "(" assignstmt ";" condition ";" assignment ")" stmt
+condition ::= expression RELATION expression
+RELATION ::= "b" | "s" | "ieq" | "e&s" | "e&b"
