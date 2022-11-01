@@ -1,0 +1,17 @@
+Scanner
+
+Params: programFile path - String, pifFile path - String, STFile path - string
+
+
+Functions:
+	Scan
+	- Reads lines from programFile
+	- Tokenize each line based on separators
+	- Assigns to each token the it's line number
+	- Writes results to PIF
+
+	Tokenize
+	- parses given line
+	- determines identifiers and classifies them
+	- returns tokenized line
+
