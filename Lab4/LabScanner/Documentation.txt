@@ -1,0 +1,52 @@
+Scanner
+
+Params: programFile path - String, pifFile path - String, STFile path - string
+
+
+Functions:
+	Scan
+	- Reads lines from programFile
+	- Tokenize each line based on separators
+	- Assigns to each token the it's line number
+	- Writes results to PIF
+
+	Tokenize
+	- parses given line
+	- determines identifiers and classifies them
+	- returns tokenized line
+
+	identifyStringConstant
+	- line and position as parameters
+	- determines the string and marks it as constant
+
+	identifyCharConstant
+	- line and position as parameters
+	- determines the char and marks it as constant
+
+	identifyMinusToken
+	- receives line, position, list of tokens
+	- determines if the minus token is an operator or is part of an identifier (to mark negative value)
+
+	identifyPlusToken
+	- receives line, position, list of tokens
+	- determines if the plus token is an operator or is part of an identifier (to mark plus value)
+
+	identifyOperator
+	- receives line, position, 
+	- determines if the string starting at position given is an operator
+
+	identifyToken
+	- receives line, position, 
+	- determines if string starting at position given is an identifier
+
+	buildPif
+	- creates and writes in the PIF file
+	- returns if the program is correct or not
+
+	
+	
+
+	
+
+
+

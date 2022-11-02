@@ -1,0 +1,36 @@
+Alphabet:
+
+Upper (A-Z) and lower case letters (a-z) of the English alphabet
+Decimal digits (0-9)
+
+Lexic:
+
+Special symbols: 
+
+	operatos: + - eq b s e&b e&s ieq mul mod div
+	separators: {} () ; : , space
+	reserved words: work when Number, Numbers, finish, display, do, cNumber,
+ String, Strings, cString, while, Char, cChar, prog, exit, otherwise, read, write
+
+Identifiers 
+a sequence of letters and  digits, such that the first character is a letter
+
+    	identifier ::= letter | letter{letter}{digit}
+	letter ::= "A" | "B" | . ..| "Z"
+	digit ::= "0" | "1" |...| "9"
+
+Constants
+
+1.Number - rule:
+	integer ::= "0" | ["-" | "+"] nzero{digit} 
+	nzero ::= "1" | .. | "9"
+	digit ::= "0" | zero
+
+
+Char
+	char:='letter'|'digit'
+
+String
+	conststring:="string"
+	string:=char{string}
+	char:=letter|digit
