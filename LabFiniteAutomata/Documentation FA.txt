@@ -1,0 +1,38 @@
+Finite Automaton
+
+Input: path to file
+
+Fields:
+	- initialState: String
+	- alphabet: Set<String>
+	- states: Set<String>
+	- finalStates: Set<String> 
+	- transitions: Map<Pair<String, String>, Set<String>>//the source state and the value through which it accesses the destination 
+state, each mapped to a set of String values, representing the destination states
+
+Checking that the FA is a DFA
+-  using the sets of values provided by the transitions map, we 
+check that each key has as value a set of length not longer than 1, returning true or false 
+accordingly.
+
+Checking that a sequence is accepted by the DFA
+- starting from the initial state, we go through each character of the given sequence and we check that the Pair formed by the 
+current state and the value given by the current character in the sequence is mapped to a 
+set containing exactly one value; this value will be the new current state in the next 
+iteration. If the Pair is not mapped to any set, then the sequence is not accepted by the DFA 
+and the algorithm stops, returning false. When we reach the end of the sequence, if the last 
+state belongs to the set of final states, then the sequence is accepted by the DFA and the 
+method returns tru
+
+
+
+letter ::= 'a' | 'b' | ... | 'z' | 'A' | 'B' | ... | 'Z'
+digit ::= '0' | '1' | ... | '9'
+alphabetCharacter ::= letter | digit
+state ::= letter
+transition ::= state alphabet state
+states ::= {state }+
+alphabet ::= {alphabetCharacter }+
+initialState ::= state
+finalStates ::= {state }+
+FAfile ::= states ‘\n’ alphabet ‘\n’ initialState ‘\n’ finalStates

@@ -1,0 +1,15 @@
+
+Number n1 |eq| 23
+Number n2 |eq| 15
+Nu$ber n3 |eq| 20
+when(n1 |es| n2) {
+when(n1 |es| n3) {
+finish n1;
+}
+}
+when(n2 |es| n1) {
+when(n2 |eS| n3) {
+finish n2;
+}
+}
+finish n3;

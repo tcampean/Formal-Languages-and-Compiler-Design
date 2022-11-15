@@ -1,0 +1,15 @@
+Number a |eq| 23;
+Number b |eq| 15;
+Number c |eq| 20;
+String s1 |eq| "constant";
+when(n1 |es| n2) {
+when(n1 |es| n3) {
+finish n1;
+}
+}
+when(n2 |es| n1) {
+when(n2 |es| n3) {
+finish n2;
+}
+}
+finish n3;
